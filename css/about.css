@@ -127,6 +127,7 @@
 
 .hisInformations {
   width: calc(50% - 6rem);
+  max-width: 100%;
   margin-left: 6rem;
 }
 
@@ -214,8 +215,7 @@
 .qualityWrap {
   width: 100%;
   position: relative;
-  padding: 6rem 6rem 0;
-  margin-bottom: 1.5rem;
+  padding: 6rem 6rem 1rem;
   overflow-y: hidden;
 }
 
@@ -288,7 +288,7 @@
 
 @media screen and (max-width: 1200px) {
   .hisInformations {
-    width: 100%;
+    width: calc(50% - 4rem);
   }
 }
 
@@ -338,7 +338,7 @@
   }
 
   .qualityWrap {
-    padding: 3rem 2.5rem 0;
+    padding: 3rem 2.5rem 1rem;
   }
 
   .qualityWrap::before {
@@ -468,5 +468,6 @@
   .quaBox {
     width: 140px;
     height: 190px;
+    margin-bottom: 2rem;
   }
 }

@@ -530,6 +530,22 @@ footer {
   }
 }
 
+@media screen and (max-width: 375px) {
+  .bannerWrap {
+    margin-top: 6rem;
+  }
+
+  .bannerWrap .textWrap {
+    flex-direction: column-reverse;
+  }
+
+  .bannerWrap .textWrap .bread {
+    margin-bottom: 1rem;
+    flex-wrap: wrap;
+    height: fit-content;
+  }
+}
+
 .categories {
   display: flex;
   width: calc(100% - 12rem);
