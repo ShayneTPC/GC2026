@@ -324,6 +324,10 @@
     margin: 1rem 1rem 0;
   }
 
+  .hisInformations {
+    width: 100%;
+  }
+
   .hisCategories {
     overflow-x: scroll;
   }
@@ -333,6 +337,7 @@
   }
 
   .hisInformations {
+    width: 100%;
     margin-left: 0;
     padding: 0 2.5rem;
   }
@@ -353,6 +358,13 @@
 @media screen and (max-width: 940px) {
   .busBoxes {
     max-width: 60vw;
+  }
+
+  .quaBox {
+    flex: 0 0 40%;
+    width: 220px;
+    height: 220px;
+    margin-bottom: 2rem;
   }
 }
 
@@ -406,11 +418,6 @@
   .qualityWrap .textWrap p {
     max-width: 100%;
     margin-left: 0;
-  }
-
-  .quaBox {
-    width: 220px;
-    height: 220px;
   }
 }
 
@@ -468,6 +475,11 @@
   .quaBox {
     width: 140px;
     height: 190px;
-    margin-bottom: 2rem;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .quaBox {
+    flex: 0 0 45%;
   }
 }
