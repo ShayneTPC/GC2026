@@ -1,0 +1,103 @@
+.contactWrap {
+  width: 100%;
+  height: 900px;
+  background: url("../images/contact/contactBg.jpg") no-repeat center;
+  background-size: cover;
+}
+
+.contactCards {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 10rem 0 6rem 15rem;
+}
+
+.contactCard {
+  width: 460px;
+  min-height: 290px;
+  height: fit-content;
+  background-color: var(--white);
+  padding: 2rem 3rem;
+  position: relative;
+  border-radius: 1rem;
+  overflow: hidden;
+  box-shadow: 0 0 0.25rem var(--shadowColor);
+}
+
+.contactCard::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  right: 1rem;
+  width: 180px;
+  height: 209px;
+  background: url("../images/contact/contactCardBg.svg") no-repeat center;
+  background-size: 100%;
+}
+
+.contactCard h3 {
+  font-size: 1.75rem;
+  margin-bottom: 1rem;
+  position: relative;
+  z-index: 1;
+}
+
+.contactCard ul {
+  position: relative;
+  z-index: 10;
+}
+.contactCard ul li {
+  list-style: none;
+  padding-left: 2rem;
+  line-height: 1.5;
+  font-size: 1.125rem;
+  position: relative;
+  margin-bottom: 1rem;
+}
+
+.contactCard ul li::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 24px;
+  height: 24px;
+  transform: translateY(-50%);
+  background-size: 100%;
+}
+
+.contactCard ul li.telIcon::before {
+  background: url("../images/contact/phoneIcon.svg") no-repeat;
+}
+
+.contactCard ul li.mailIcon::before {
+  background: url("../images/contact/mailIcon.svg") no-repeat center;
+}
+
+.contactCard ul li.mapIcon::before {
+  background: url("../images/contact/locationIcon.svg") no-repeat;
+}
+
+@media screen and (max-width: 1280px) {
+  .contactWrap {
+    height: 700px;
+  }
+  .contactCards {
+    padding: 3rem 0 6rem 10rem;
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .contactWrap {
+    height: 550px;
+    margin-bottom: 2rem;
+  }
+  .contactCards {
+    padding: 2.5rem;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .contactCard {
+    padding: 2rem 1.5rem;
+  }
+}

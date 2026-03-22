@@ -1,0 +1,670 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family:
+    Microsoft JhengHei,
+    "Noto Sans",
+    sans-serif;
+}
+
+:root {
+  --white: #ffffff;
+  --mainColor: #103675;
+  --mainColor20: rgba(16, 54, 117, 0.2);
+  --mainColor30: rgba(16, 54, 117, 0.3);
+  --mainColor40: rgba(16, 54, 117, 0.4);
+  --mainColor50: rgba(16, 54, 117, 0.5);
+  --secondColor: #f4f6f8;
+  --thirdColor: #368cdc;
+  --activeColor: #368cdc;
+  --decorateColor1: #cceeff;
+  --decorateColor2: #9bfae6;
+  --shadowColor: #dddddd;
+  --textColor: #333333;
+}
+
+html {
+  font-size: 16px;
+  color: var(--textColor);
+}
+
+a {
+  text-decoration: none;
+  outline: unset;
+  color: var(--textColor);
+  word-wrap: break-word;
+}
+
+a:hover {
+  color: var(--activeColor);
+}
+
+img {
+  width: 100%;
+}
+
+.moreBtn {
+  position: relative;
+  padding-right: 1.5rem;
+}
+
+.moreBtn::after {
+  content: "";
+  position: absolute;
+  top: 0.25rem;
+  right: 0;
+  width: 1rem;
+  height: 1rem;
+  background-image: url(../images/rightArrow.svg);
+}
+
+.moreBtn:hover {
+  color: var(--activeColor);
+}
+
+.moreBtn:hover::after {
+  background-image: url(../images/rightArrowHover.svg);
+}
+
+table {
+  border-collapse: collapse;
+  border: 0;
+  letter-spacing: 1px;
+  text-align: center;
+  width: 80%;
+  margin: 1rem 0;
+  font-size: 1.125rem;
+}
+
+th,
+td {
+  padding: 1rem 2rem;
+}
+
+thead tr {
+  background-color: var(--thirdColor);
+  color: var(--white);
+}
+
+tbody tr {
+  border-bottom: 1px solid var(--activeColor);
+}
+
+h2 {
+  font-size: 4rem;
+}
+
+.titleStyle {
+  font-size: 2.815rem;
+  position: relative;
+  margin-bottom: 1.5rem;
+  z-index: 1;
+}
+
+.titleStyle::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: -0.75rem;
+  width: 90px;
+  height: 18px;
+  background-color: var(--decorateColor1);
+  z-index: -1;
+}
+
+.iconTitle {
+  font-size: 1.375rem;
+  margin-bottom: 0.5rem;
+}
+
+p {
+  font-size: 1.125rem;
+  letter-spacing: 1px;
+  line-height: 1.5;
+}
+
+.mt-3 {
+  margin-top: 1.5rem;
+}
+
+.mt-6 {
+  margin-top: 3rem;
+}
+
+.mb-0 {
+  margin-bottom: 0;
+}
+
+.divRow {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.mobScrollTxt {
+  display: none;
+}
+
+@media screen and (max-width: 876px) {
+  table {
+    width: 100%;
+  }
+
+  .tableMobWrap {
+    overflow-x: scroll;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  table {
+    width: 480px;
+  }
+
+  .mobScrollTxt {
+    display: block;
+  }
+
+  .mobScrollTxt p {
+    font-size: 1rem;
+    color: #a0a0a0;
+    text-align: center;
+  }
+}
+
+.menu {
+  width: 100vw;
+  height: 80px;
+  background-color: var(--white);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 0 1rem var(--shadowColor);
+  padding: 0 3.75rem;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+}
+
+.logo a,
+.ftLogo a,
+.mobLogo a {
+  display: block;
+  max-width: 311px;
+}
+
+.logo img,
+.ftLogo img {
+  width: 100%;
+}
+
+.menuLinks ul,
+.ftLinks ul {
+  display: flex;
+  list-style: none;
+  margin-right: 2rem;
+}
+
+.menuLinks ul li,
+.ftLinks ul li {
+  padding: 10px 15px;
+}
+
+.menuLinks ul li a,
+.ftLinks ul li a {
+  font-size: 1.25rem;
+}
+
+.menuLinks ul li a:hover,
+.ftLinks ul li a:hover {
+  color: var(--activeColor);
+}
+
+footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 140px;
+}
+
+.footerWrap {
+  width: 100vw;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 0 3.75rem;
+}
+
+.copyright p {
+  font-size: 0.9rem;
+  color: #9e9e9e;
+  padding: 0 2rem;
+  padding-top: 1rem;
+}
+
+.mobLogo,
+.closeBtn,
+.mobmenuBtn {
+  display: none;
+}
+
+@media screen and (max-width: 1400px) {
+  .menu,
+  .footerWrap {
+    padding: 0 2rem 0 1rem;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  body.noScroll {
+    overflow: hidden;
+  }
+
+  .logo a,
+  .ftLogo a,
+  .mobLogo a {
+    max-width: 250px;
+  }
+
+  .menuLinks {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: end;
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(0px);
+    -webkit-backdrop-filter: blur(0px);
+    opacity: 0;
+    pointer-events: none;
+    z-index: 100;
+    transition:
+      opacity 0.3s ease,
+      backdrop-filter 0.3s ease;
+  }
+
+  .mobCol {
+    width: 55vw;
+    max-width: 100%;
+    height: 100vh;
+    background: var(--white);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 5rem 1.5rem 2rem;
+    transform: translateX(100%);
+    transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  .menuLinks.active {
+    opacity: 1;
+    pointer-events: auto;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+  }
+
+  .menuLinks.active .mobCol {
+    transform: translateX(0);
+    transition-delay: 0.15s;
+  }
+
+  .closeBtn {
+    display: block;
+    position: absolute;
+    top: 2.5rem;
+    right: 0.5rem;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    transform: translate(-50%, -50%);
+  }
+
+  .closeBtn::before,
+  .closeBtn::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 0;
+    display: block;
+    width: 40px;
+    height: 2px;
+    background-color: var(--textColor);
+    transform: rotate(45deg);
+    transform-origin: center;
+    transition: all 0.1s;
+  }
+
+  .closeBtn::after {
+    transform: rotate(-45deg);
+  }
+
+  .closeBtn:hover::before,
+  .closeBtn:hover::after {
+    background-color: var(--activeColor);
+  }
+
+  .menuLinks ul {
+    flex-direction: column;
+  }
+
+  .ftLinks ul {
+    margin-top: 1rem;
+  }
+
+  .menuLinks ul li,
+  .ftLinks ul li {
+    padding: 0 1rem 1rem;
+  }
+
+  .mobLogo {
+    display: block;
+  }
+
+  .mobmenuBtn {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 40px;
+    height: 24px;
+    cursor: pointer;
+  }
+
+  .mobmenuBtn span {
+    display: block;
+    width: 40px;
+    height: 2px;
+    background-color: var(--textColor);
+    transition: all 0.1s;
+  }
+
+  .mobmenuBtn:hover span {
+    background-color: var(--activeColor);
+  }
+}
+
+@media screen and (max-width: 876px) {
+  footer {
+    height: 100%;
+    margin: 1rem 0;
+  }
+
+  .footerWrap,
+  .ftLinks ul {
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin-bottom: 1rem;
+  }
+}
+
+/* 手機尺寸 */
+@media screen and (max-width: 576px) {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  .titleStyle {
+    font-weight: 500;
+  }
+  h2 {
+    font-size: 2.5rem;
+  }
+
+  .titleStyle {
+    font-size: 1.75rem;
+  }
+}
+
+.backToTop {
+  width: 60px;
+  height: 60px;
+  position: fixed;
+  bottom: 6rem;
+  right: 1rem;
+  background-color: var(--mainColor);
+  border-radius: 100%;
+  z-index: 1000;
+  transition: all 0.1s linear;
+  display: none;
+}
+
+.backToTop a {
+  width: 100%;
+  height: 100%;
+  color: var(--white);
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 1rem;
+  transition: all 0.1s linear;
+}
+
+.backToTop a::before {
+  content: "";
+  position: absolute;
+  top: 1rem;
+  left: 50%;
+  width: 1rem;
+  height: 10px;
+  background-image: url(../images/topArrow.svg);
+  background-repeat: no-repeat;
+  transform: translateX(-50%);
+  transition: all 0.1s linear;
+}
+
+.backToTop:hover {
+  background-color: var(--decorateColor1);
+}
+
+.backToTop:hover a {
+  color: var(--activeColor);
+}
+
+.backToTop:hover a::before {
+  background-image: url(../images/topArrowHover.svg);
+  background-repeat: no-repeat;
+}
+
+.backToTop.active {
+  display: block;
+}
+
+.bannerWrap {
+  width: 100vw;
+  margin-top: 7.5rem;
+}
+
+.bannerImg {
+  width: 100%;
+}
+
+.bannerImg img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.bannerWrap .textWrap {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 6rem;
+}
+
+.bread {
+  display: flex;
+  height: 0.875rem;
+  margin: 0.5rem 0;
+}
+
+.bread a {
+  display: block;
+  padding: 0 1rem;
+  position: relative;
+  font-size: 0.875rem;
+}
+
+.bread a:not(:last-child)::after {
+  content: "/";
+  position: absolute;
+  top: calc(50% + 1px);
+  right: -2px;
+  font-size: 1rem;
+  color: var(--textColor);
+  transform: translateY(-50%);
+}
+
+.bread a.active {
+  color: var(--activeColor);
+}
+
+@media screen and (max-width: 991px) {
+  .bannerWrap .textWrap {
+    padding: 0 2rem;
+  }
+}
+
+.categories {
+  display: flex;
+  width: calc(100% - 12rem);
+  margin: 1.5rem 6rem;
+  list-style: none;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+}
+
+.mobCategoriesWrap {
+  position: relative;
+}
+
+.categories li {
+  flex: 0 0 auto;
+  margin: 0 1rem;
+  font-size: 1.125rem;
+  position: relative;
+  transition: all 0.1s linear;
+}
+
+.categories li:first-child {
+  margin-left: 0;
+}
+
+.categories li a {
+  display: block;
+  color: #9e9e9e;
+  width: 100%;
+  padding-bottom: 0.5rem;
+}
+
+.categories li a::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 0%;
+  height: 1px;
+  background-color: var(--activeColor);
+  transition: all 0.1s linear;
+  transform: translateX(-50%);
+}
+
+.categories li:hover a {
+  color: var(--activeColor);
+}
+
+.categories li:hover a::after {
+  width: 100%;
+}
+
+.categories::-webkit-scrollbar {
+  display: none;
+}
+
+.tabArrow {
+  position: absolute;
+  top: 40%;
+  transform: translateY(-50%);
+  z-index: 10;
+  width: 36px;
+  height: 36px;
+  border: none;
+  border-radius: 50%;
+  background: var(--mainColor);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  pointer-events: none;
+  transition: 0.3s;
+}
+
+.tabArrow.left {
+  left: 3vw;
+}
+
+.tabArrow.right {
+  right: 3vw;
+}
+
+.tabArrow img {
+  width: 10px;
+  height: 30px;
+}
+
+.tabArrow.show {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+@media screen and (max-width: 991px) {
+  .categories {
+    width: calc(100% - 5rem);
+    margin: 1.5rem 2.5rem;
+  }
+
+  .tabArrow.left {
+    left: 1vw;
+  }
+
+  .tabArrow.right {
+    right: 1vw;
+  }
+}
+
+.tabLink {
+  width: fit-content;
+  padding: 0.5rem 1.25rem;
+  background-color: var(--white);
+  border: 1px solid var(--textColor);
+  border-radius: 5px;
+  margin: 0 1rem;
+  cursor: pointer;
+  transition: all 0.1s linear;
+  font-size: 1.125rem;
+}
+
+.tabLink:first-child {
+  margin-left: 0;
+}
+
+.tabLink:hover,
+.tabLink.selected {
+  background-color: var(--decorateColor1);
+  border-color: var(--activeColor);
+  color: var(--activeColor);
+}
+
+.divTable {
+  display: none;
+}
+
+.divTable.active {
+  display: block;
+}

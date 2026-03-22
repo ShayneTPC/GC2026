@@ -1,0 +1,458 @@
+.hero {
+  width: 100vw;
+  position: relative;
+  margin-top: 80px;
+}
+
+.hero .textWrap {
+  position: absolute;
+  top: 15%;
+  left: 22%;
+}
+
+.hero .textWrap h1 {
+  font-size: 5rem;
+  /* font-weight: 500; */
+  color: var(--white);
+  letter-spacing: 2px;
+}
+
+.hero .imgWrap {
+  width: 100%;
+}
+
+.hero .imgWrap img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.aboutWrap {
+  width: 100vw;
+  height: 800px;
+  background: url(../images/aboutBg.png) bottom no-repeat;
+  background-size: contain;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 10rem;
+  margin: 3.75rem 0;
+  position: relative;
+}
+
+#canvas-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+canvas {
+  display: block;
+}
+
+.aboutTxt {
+  flex: 0 0 40%;
+  max-width: 480px;
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  margin-bottom: 10rem;
+  z-index: 1;
+}
+
+.aboutTxt p {
+  font-size: 1.125rem;
+  line-height: 1.5;
+  letter-spacing: 1px;
+}
+
+.aboutTxt .btnWrap {
+  position: absolute;
+  bottom: -4rem;
+  right: 0;
+}
+
+.aboutImgs {
+  position: relative;
+  flex: 0 0 60%;
+  max-width: 100%;
+  height: 100%;
+}
+
+.aboutImgs .imgLeft,
+.aboutImgs .imgRight {
+  width: 400px;
+  height: 400px;
+  position: absolute;
+  border: 1px solid var(--thirdColor);
+  background-color: var(--white);
+  border-radius: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+}
+
+.aboutImgs .imgLeft {
+  width: 400px;
+  height: 400px;
+  top: 3rem;
+  left: 6rem;
+  animation: moveIngLeft 5s ease-in-out infinite alternate;
+}
+
+@keyframes moveIngLeft {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(-2rem);
+  }
+}
+
+.aboutImgs .imgRight {
+  width: 205px;
+  height: 205px;
+  bottom: 3rem;
+  right: 6rem;
+  animation: moveIngRight 3s ease-in-out infinite alternate;
+}
+
+@keyframes moveIngRight {
+  from {
+    transform: translateY(-1.5rem);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+.proWrap {
+  width: 100vw;
+  max-width: 1200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 3.75rem auto;
+}
+
+.proBoxes {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  max-width: 1600px;
+  margin: 0 auto;
+}
+
+.proBoxes a {
+  display: flex;
+  justify-content: center;
+  flex: 0 0 33.3333%;
+  margin: 1.5rem;
+}
+
+.proBoxes .proBox {
+  max-width: 460px;
+  height: 360px;
+  background-color: var(--white);
+  border-radius: 1rem;
+  box-shadow: 0 0 0.25rem var(--shadowColor);
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  position: relative;
+  transition: all 0.2s linear;
+}
+
+.proBoxes .proBox .imgBox {
+  max-width: calc(100% - 3rem);
+  height: 200px;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  position: absolute;
+  top: 1.5rem;
+  left: 1.5rem;
+  transition: all 0.2s linear;
+}
+
+.proBoxes .proBox .imgBox img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+}
+
+.proBoxes .proBox .txtBox {
+  max-width: 420px;
+  height: calc(100% - 200px);
+  padding-top: 0.75rem;
+  z-index: 2;
+}
+
+.proBoxes .proBox .txtBox p {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+}
+
+.proBoxes a:hover {
+  color: var(--textColor);
+}
+
+.proBoxes .proBox:hover {
+  box-shadow: 0 0.5rem 1rem #cccccc;
+}
+
+.proBoxes .proBox:hover .imgBox {
+  max-width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.proBoxes .proBox:hover .imgBox img {
+  opacity: 0.2;
+}
+
+.techWrap {
+  width: 100vw;
+  height: 560px;
+  padding: 3.75rem 10rem;
+  background-color: var(--secondColor);
+}
+
+.techTitleWrap {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+}
+
+.techTitleWrap .titleStyle {
+  margin-bottom: 0;
+}
+
+.techBoxes {
+  max-width: 1200px;
+  margin: 3rem auto 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+.techBoxes a {
+  display: block;
+  width: calc(100% / 3 - 2rem);
+  height: 290px;
+  background-color: var(--white);
+  border-radius: 1rem;
+}
+
+.techBoxes .techBox {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 1rem;
+  transition: all 0.2s linear;
+}
+
+.techBoxes .techBox:hover {
+  box-shadow: 0 0.5rem 1rem #cccccc;
+}
+
+.techBoxes .techBox .imgBox {
+  width: 120px;
+  height: 120px;
+}
+
+.contactWrap {
+  width: 100vw;
+  margin: 3.75rem 0 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.contactWrap::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  right: -6rem;
+  max-width: 55vw;
+  width: 100%;
+  height: 100%;
+  background: url(../images/contaceW.png) no-repeat;
+  background-size: contain;
+  z-index: 1;
+  opacity: 0.2;
+}
+
+.contactTitleWrap {
+  display: flex;
+  max-width: 320px;
+  margin-left: 10rem;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  z-index: 2;
+}
+
+.contactBg {
+  width: 100vw;
+  height: auto;
+}
+
+.contactBg img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+@media screen and (max-width: 1400px) {
+  .aboutWrap,
+  .proWrap,
+  .techWrap {
+    padding-left: 4rem;
+    padding-right: 4rem;
+  }
+
+  .contactTitleWrap {
+    margin-left: 4rem;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .hero .textWrap {
+    top: 10%;
+    left: 17%;
+  }
+
+  .hero .textWrap h1 {
+    font-size: 4rem;
+  }
+
+  .aboutWrap {
+    align-items: flex-start;
+    height: 600px;
+  }
+
+  .aboutTxt,
+  .aboutImgs {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  .aboutTxt {
+    margin-bottom: 0;
+  }
+
+  .aboutImgs {
+    height: fit-content;
+  }
+
+  .aboutImgs .imgLeft {
+    width: 300px;
+    height: 300px;
+    top: -12rem;
+  }
+
+  .aboutImgs .imgRight {
+    width: 180px;
+    height: 180px;
+    bottom: -14rem;
+    padding: 0.85rem;
+  }
+
+  .proBoxes a {
+    flex: 0 0 40%;
+  }
+
+  .techWrap {
+    height: auto;
+  }
+
+  .contactWrap::after {
+    right: -8rem;
+    max-width: 61vw;
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .aboutImgs .imgLeft {
+    left: 0;
+  }
+
+  .aboutImgs .imgRight {
+    right: 0;
+  }
+  .contactWrap::after {
+    max-width: 68vw;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .aboutImgs .imgLeft {
+    width: 260px;
+    height: 260px;
+    top: -10rem;
+    padding: 0.75rem;
+  }
+  .aboutImgs .imgRight {
+    width: 160px;
+    height: 160px;
+    bottom: -14rem;
+    padding: 0.5rem;
+  }
+
+  .proBoxes a {
+    flex: 0 0 100%;
+  }
+
+  .techBoxes a {
+    width: 100%;
+    max-width: 340px;
+    margin: 0 auto 3rem;
+  }
+
+  .techBoxes a:last-child {
+    margin-bottom: 0;
+  }
+
+  .contactWrap::after {
+    max-width: 75vw;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .hero .textWrap h1 {
+    font-size: 2.75rem;
+  }
+  .aboutWrap,
+  .proWrap,
+  .techWrap {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+
+  .aboutImgs .imgLeft {
+    width: 230px;
+    height: 230px;
+  }
+
+  .contactTitleWrap {
+    margin-left: 2rem;
+  }
+
+  .contactWrap::after {
+    max-width: 80vw;
+  }
+}

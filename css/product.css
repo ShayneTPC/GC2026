@@ -1,0 +1,284 @@
+.introWrap {
+  width: 100%;
+  max-width: 1800px;
+  padding: 0 6rem;
+  margin: 3rem auto;
+}
+
+.proImgBox {
+  flex: 0 0 33.3333%;
+  max-width: 100%;
+  padding: 0 2rem;
+}
+
+.proTextBox {
+  flex: 0 0 66.6667%;
+  max-width: 100%;
+  padding: 0 2rem;
+}
+
+.proWrap {
+  width: 100%;
+  background-color: var(--secondColor);
+  padding: 4rem 6rem;
+  margin: 3rem 0;
+}
+
+.proWrap .titleStyle {
+  width: fit-content;
+  margin: 0 auto;
+}
+
+.proWrap .categories {
+  display: flex;
+  align-items: center;
+}
+
+.proInfo {
+  max-width: 1800px;
+  margin: 0 auto;
+  padding: 0 6rem;
+}
+
+.proInfo .ingSta {
+  flex: 0 0 66.6667%;
+  max-width: 100%;
+}
+
+.proInfo .proSpe {
+  flex: 0 0 33.3333%;
+  max-width: 100%;
+}
+
+.proInfo .proSpe {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.proInfo .ingSta h4,
+.proInfo .proSpe h4 {
+  font-size: 1.5rem;
+}
+
+.proInfo .proSpe h5 {
+  font-size: 1.25rem;
+  color: var(--thirdColor);
+  margin: 1rem 0 0.5rem;
+}
+
+.proInfo .proSpe ol {
+  margin-left: 1.5rem;
+}
+
+.proInfo .proSpe ol li {
+  margin-bottom: 0.5rem;
+  font-size: 1.125rem;
+}
+
+.proDownload {
+  display: block;
+  width: fit-content;
+  padding: 2.25rem 2rem 2.25rem 6rem;
+  background-color: var(--white);
+  border-radius: 1rem;
+  box-shadow: 0 0 0.25rem var(--shadowColor);
+  position: relative;
+  font-size: 1.125rem;
+  transition: all 0.2s cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+
+.proDownload:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 0.45rem var(--shadowColor);
+}
+
+.proDownload::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 1.5rem;
+  transform: translateY(-50%);
+  width: 45px;
+  height: 50px;
+  background: url("../images/pdfIcon.svg") no-repeat center;
+  background-size: contain;
+}
+
+.proPhotoWrap {
+  width: 100%;
+  padding: 0 6rem;
+  margin: 4rem auto 2rem;
+  position: relative;
+}
+
+.proPhotoWrap::before,
+.proPhotoWrap::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 12vw;
+  height: calc(100% - 6rem);
+  background: linear-gradient(to left, #ffffff 60%, #ffffff00);
+  z-index: 2;
+}
+
+.proPhotoWrap::before {
+  right: unset;
+  left: 0;
+  background: linear-gradient(to right, #ffffff 60%, #ffffff00);
+}
+
+.swiper {
+  width: 100%;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.proPhotoWrap .swiper-button-next,
+.proPhotoWrap .swiper-button-prev {
+  position: absolute;
+  top: 1.5rem;
+  right: 5vw;
+  left: unset;
+  background-color: var(--white);
+  color: var(--textColor);
+  border: 1px solid var(--textColor);
+  border-radius: 100%;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.2s linear;
+}
+
+.proPhotoWrap .swiper-button-prev {
+  right: calc(5vw + 100px);
+}
+
+.proPhotoWrap .swiper-button-next svg,
+.proPhotoWrap .swiper-button-prev svg {
+  width: 36px;
+  height: 36px;
+}
+
+.proPhotoWrap .swiper-button-next:hover,
+.proPhotoWrap .swiper-button-prev:hover {
+  background-color: var(--decorateColor1);
+  color: var(--activeColor);
+  border: 1px solid var(--activeColor);
+}
+
+.swiper-slide {
+  width: 600px;
+  height: 400px;
+  margin: 0 1.5rem;
+  opacity: 0.4;
+  transition: opacity 0.2s linear;
+  text-align: center;
+}
+
+.swiper-slide .slideImg {
+  width: 600px;
+  height: 400px;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 1rem;
+  overflow: hidden;
+  background-color: var(--secondColor);
+}
+
+.swiper-slide p {
+  padding-top: 1rem;
+  text-align: center;
+}
+
+.swiper-slide .slideImg img {
+  width: auto;
+  height: 100%;
+  filter: grayscale(1);
+  transition: filter 0.2s linear;
+}
+
+.swiper-slide-active,
+.swiper-slide:hover {
+  opacity: 1;
+}
+
+.swiper-slide.swiper-slide-active img,
+.swiper-slide:hover img {
+  filter: grayscale(0);
+}
+
+@media screen and (max-width: 1280px) {
+  .proInfo {
+    padding: 0;
+  }
+
+  .proWrap .categories {
+    width: 100%;
+    padding: 0;
+    margin: 1.5rem 0;
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .introWrap,
+  .proPhotoWrap {
+    padding: 0 2.5rem;
+  }
+
+  .proImgBox {
+    padding: 0 1rem;
+  }
+
+  .proWrap {
+    padding: 3rem 2.5rem;
+  }
+}
+
+@media screen and (max-width: 876px) {
+  .proInfo .ingSta,
+  .proInfo .proSpe {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  .proInfo .proSpe,
+  .proDownload {
+    margin-top: 2.5rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .proImgBox {
+    flex: 0 0 100%;
+    max-width: 400px;
+    padding: 0;
+    margin: auto;
+  }
+
+  .proTextBox {
+    flex: 0 0 100%;
+    padding: 0;
+    max-width: 100%;
+    margin-top: 1rem;
+  }
+
+  .proIntro:nth-of-type(even) {
+    flex-direction: column-reverse;
+  }
+
+  .swiper-slide {
+    width: 100%;
+    height: 275px;
+  }
+  .swiper-slide .slideImg {
+    width: 300px;
+    height: 245px;
+  }
+}
