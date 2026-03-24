@@ -132,7 +132,7 @@
 
 .swiper {
   width: 100%;
-  padding-top: 50px;
+  padding-top: 20px;
   padding-bottom: 50px;
 }
 
@@ -172,8 +172,8 @@
 }
 
 .swiper-slide {
-  width: 600px;
-  height: 400px;
+  width: 580px;
+  height: 300px;
   margin: 0 1.5rem;
   opacity: 0.4;
   transition: opacity 0.2s linear;
@@ -181,8 +181,8 @@
 }
 
 .swiper-slide .slideImg {
-  width: 600px;
-  height: 400px;
+  width: 580px;
+  height: 300px;
   margin: auto;
   display: flex;
   justify-content: center;
