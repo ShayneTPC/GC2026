@@ -401,7 +401,6 @@ footer {
   }
 }
 
-/* 手機尺寸 */
 @media screen and (max-width: 576px) {
   h1,
   h2,

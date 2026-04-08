@@ -3,6 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content=" 華科工業將秉持高科技氣體研發及穩定生產為目標，以提供優質氣體產品及技術服務，與客戶共創營利雙贏及展開全方位及未來性合作，為客戶帶來下世代的競爭優勢。" />
+    <meta name="keywords" content=華科工業" />
     <title>華科工業股份有限公司</title>
     <link rel="shortcut icon" href="images/favicon.ico" />
     <link rel="stylesheet" href="css/animate.min.css" />
@@ -226,7 +228,6 @@
       let scrollX = 0;
       const particles = [];
 
-      // 初始化尺寸與粒子
       function init() {
         width = canvas.width = window.innerWidth;
         height = canvas.height = window.innerHeight;
@@ -250,11 +251,9 @@
       init();
 
       function animate() {
-        // 背景保持純白
         ctx.fillStyle = "#ffffff";
         ctx.fillRect(0, 0, width, height);
 
-        // 繪製背景粒子 (微量裝飾)
         particles.forEach((p) => {
           p.x += p.speedX;
           p.y += p.speedY + Math.sin(time * 0.3 + p.phase) * 0.08;
